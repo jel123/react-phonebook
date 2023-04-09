@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/bebasneue/v9/JTUSjIg69CK48gW7PXooxW4.ttf) format('truetype');
+}
+body {
+  background-color: #F5F5F5;
+  font-family: 'Poppins', sans-serif;
+}
+.phonebook-container {
+  display: flex;
+}
+.phonebook-container h3,
+.phonebook-container h2 {
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.phonebook-container h2 {
+  text-align: center;
+}
+.phonebook-container input {
+  padding: 5px;
+}
+.phonebook-container ul > li {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  border: 2px solid #E8E2E2;
+  border-top: none;
+  border-right: none;
+  padding: 10px;
+}
+.phonebook-container ul > li:first-child {
+  border-top: none;
+}
+.phonebook-container ul > li:last-child {
+  border-bottom: none;
+}
+.phonebook-container .formWrapper label[for="number"] {
+  margin-left: 20px;
+}
+.phonebook-container .formWrapper button {
+  font-size: 1.2rem;
+  background-color: #F99417;
+  color: #F5F5F5;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  display: block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-family: inherit;
+  border-style: solid;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+.phonebook-container .formWrapper button:hover {
+  background-color: black;
+}
+.phonebook-container .formWrapper .name {
+  margin-bottom: 10px;
+}
+.phonebook-container .formWrapper input {
+  width: 100%;
+}
+.phonebook-container .filter-wrapper input {
+  width: 100%;
+}
+.phonebook-container .filter-wrapper label {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.phonebook-container .rightNumbers {
+  width: 100%;
+}
+/*# sourceMappingURL=phonebook.css.map */
