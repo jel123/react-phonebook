@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-phonebook/static/css/main.d180201b.css",
+    "main.js": "/react-phonebook/static/js/main.9cdcadd7.js",
+    "static/js/787.0bec1c65.chunk.js": "/react-phonebook/static/js/787.0bec1c65.chunk.js",
+    "index.html": "/react-phonebook/index.html",
+    "main.d180201b.css.map": "/react-phonebook/static/css/main.d180201b.css.map",
+    "main.9cdcadd7.js.map": "/react-phonebook/static/js/main.9cdcadd7.js.map",
+    "787.0bec1c65.chunk.js.map": "/react-phonebook/static/js/787.0bec1c65.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d180201b.css",
+    "static/js/main.9cdcadd7.js"
+  ]
+}
