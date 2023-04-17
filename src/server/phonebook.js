@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const phoneBookUrl = process.env.BACKEND_API_URL;
+const phoneBookUrl = process.env.REACT_APP_BACKEND_API_URL;
 
 console.log(phoneBookUrl);
 
