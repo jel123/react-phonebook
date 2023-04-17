@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const phoneBookUrl = "http://localhost:3001/phonebook";
+const phoneBookUrl =
+  process.env.BACKEND_API_URL || "http://localhost:8000/phonebook";
 
 const getPhonebookData = () => {
   return axios.get(phoneBookUrl).then((res) => res.data);
@@ -15,7 +16,7 @@ const alterPhoneBook = (phoneObj, id) => {
 };
 
 const deleteContact = (id) => {
-  return axios.delete(`${phoneBookUrl}/${id}`).then((res) => res);
+  return axios.delete(`${phoneBookUrl}/${id}`).then((res) => res.data);
 };
 
 const exportedObject = {
