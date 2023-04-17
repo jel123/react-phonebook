@@ -10,11 +10,13 @@ function App() {
 
   const [searchFilter, setSearchFilter] = useState("");
 
-  const { getPhonebookData, addPhoneBook, alterPhoneBook, deleteContact } =
-    phonebook;
+  const { addPhoneBook, alterPhoneBook, deleteContact } = phonebook;
 
   useEffect(() => {
-    getPhonebookData().then((res) => setPersons(res));
+    const fetchPhoneData = () => {
+      return phonebook.getPhonebookData().then((res) => setPersons(res));
+    };
+    fetchPhoneData();
   }, []);
 
   const onAddHandler = (event) => {
