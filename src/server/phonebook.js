@@ -2,6 +2,8 @@ import axios from "axios";
 
 const phoneBookUrl = process.env.BACKEND_API_URL;
 
+console.log(phoneBookUrl);
+
 const getPhonebookData = () => {
   return axios.get(phoneBookUrl, { crossDomain: true }).then((res) => res.data);
 };
