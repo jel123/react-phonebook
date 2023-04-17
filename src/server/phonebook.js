@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const phoneBookUrl =
-  process.env.BACKEND_API_URL || "http://localhost:8000/phonebook";
+const phoneBookUrl = process.env.BACKEND_API_URL;
 
 const getPhonebookData = () => {
   return axios.get(phoneBookUrl).then((res) => res.data);
