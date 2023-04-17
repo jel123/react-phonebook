@@ -17,7 +17,7 @@ const alterPhoneBook = (phoneObj, id) => {
 };
 
 const deleteContact = (id) => {
-  return axios.delete(`${phoneBookUrl}/${id}`).then((res) => res.data);
+  return axios.delete(`${phoneBookUrl}/${id}`).then((res) => res);
 };
 
 const exportedObject = {
