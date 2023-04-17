@@ -18,6 +18,10 @@ body {
 }
 .phonebook-container {
   display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 15vh;
+  padding: 0 20px;
 }
 .phonebook-container h3,
 .phonebook-container h2 {
@@ -31,10 +35,16 @@ body {
 }
 .phonebook-container input {
   padding: 5px;
+  box-sizing: border-box;
+}
+.phonebook-container ul {
+  width: 100%;
+  padding-left: 0;
 }
 .phonebook-container ul > li {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   list-style-type: none;
   border: 2px solid #E8E2E2;
   border-top: none;
@@ -82,6 +92,54 @@ body {
   font-weight: 700;
 }
 .phonebook-container .rightNumbers {
+  display: flex;
   width: 100%;
+  align-items: center;
+  margin-left: 50px;
+}
+.phonebook-container .rightNumbers .info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.phonebook-container .rightNumbers button {
+  font-size: 1rem;
+  background-color: #ED2B2A;
+  color: #F5F5F5;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  display: block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-family: inherit;
+  border-style: solid;
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+.phonebook-container .rightNumbers button:hover {
+  background-color: #F15A59;
+}
+.phonebook-container .leftForm {
+  width: 45%;
+}
+@media screen and (max-width: 834px) {
+  .phonebook-container {
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .phonebook-container .leftForm,
+  .phonebook-container .rightNumbers ul {
+    width: 100%;
+    padding-left: 0;
+  }
+  .phonebook-container .rightNumbers {
+    margin-left: 0;
+  }
+  .phonebook-container .rightNumbers ul > li {
+    border-left: none;
+  }
+  .phonebook-container .formWrapper button {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=phonebook.css.map */

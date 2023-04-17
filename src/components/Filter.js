@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
 
-function Filter({onChangeFilter}) {
+function Filter({ onChangeFilter }) {
   return (
-    <div className='filter-wrapper'>
-        <label htmlFor='filter-input'>Filter shown with: </label>
-        <input className='input-filter' id="filter-input" onChange={onChangeFilter}/>
+    <div className="filter-wrapper">
+      <label htmlFor="filter-input">Filter shown with: </label>
+      <input
+        className="input-filter"
+        id="filter-input"
+        onChange={onChangeFilter}
+      />
     </div>
-  )
+  );
 }
 
-export default Filter
+export default Filter;

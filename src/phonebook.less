@@ -4,6 +4,8 @@
 @color-bg: #F5F5F5;
 @color-border: #E8E2E2;
 @color-button: #F99417;
+@color-button-delete: #ED2B2A;
+@color-button-delete-hover: #F15A59;
 
 @font_primary: 'Poppins', sans-serif;
 @font_secondary: 'Bebas Neue', cursive;
@@ -15,6 +17,10 @@ body {
 
 .phonebook-container {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 15vh;
+    padding: 0 20px;
 
     h3,
     h2 {
@@ -30,12 +36,17 @@ body {
 
     input {
         padding: 5px;
+        box-sizing: border-box;
     }
 
     ul {
+        width: 100%;
+        padding-left: 0;
+
         > li {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
             list-style-type: none;
             border: 2px solid @color-border;
             border-top: none;
@@ -58,23 +69,7 @@ body {
         }
 
         button {
-            font-size: 1.2rem;
-            background-color: @color-button;
-            color: @color-bg;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 20px;
-            display: block;
-            margin-top: 10px;
-            text-transform: uppercase;
-            font-family: inherit;
-            border-style: solid;
-            cursor: pointer;
-            transition:  ease-in-out 200ms;
-
-            &:hover {
-                background-color: black;
-            }
+            .style-button(@color-button, black, 1.2rem);
         }
 
         .name {
@@ -99,6 +94,72 @@ body {
 
     .rightNumbers {
         width: 100%;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-left: 50px;
+
+
+        .info-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        button {
+            .style-button(@color-button-delete, @color-button-delete-hover, 1rem);
+        }
+    }
+
+    .leftForm {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .phonebook-container {
+        flex-direction: column;
+        padding: 0 30px;
+
+        .leftForm,
+        .rightNumbers ul {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        .rightNumbers {
+            margin-left: 0;
+
+            ul > li {
+                border-left: none;
+            }
+        }
+
+        .formWrapper {
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.style-button(@bg-color, @hover-color, @font-size) {
+    font-size: @font-size;
+    background-color: @bg-color;
+    color: @color-bg;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    display: block;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: inherit;
+    border-style: solid;
+    cursor: pointer;
+    transition:  ease-in-out 200ms;
+
+    &:hover {
+        background-color: @hover-color;
     }
 }
 
